@@ -67,19 +67,20 @@ flowchart LR
     BCPLIOX{{BCPLIOX}}
     BCAEX{{BCAEX}}
     BLEXX{{BLEXX}}
-    BCNGX{{BCNGX}}
+    BNCGX{{BNCGX}}
     BSAEX{{BSAEX}}
     BTRNX{{BTRNX}}
     streams.d[[streams.d]]
     altofilesys.d[[altofilesys.d]]
     sysdefs.d[[sysdefs.d]]
     bcplfiles.d[[bcplfiles.d]]
+    BCPL_(BCPL0.bcpl<br/>BCPL1.bcpl<br/>BCPLDOS.bcpl)
+
     BCAEx(BCAE0.bcpl<br/>BCAE1.bcpl<br/>BCAE2.bcpl<br/>BCAE3.bcpl<br/>BCAE4.bcpl) --> BCAEX
     BCAEX --> BCPLX
-    BCPL0.bcpl --> BCPLX
-    BCPL0.bcpl --> BCPLIOX
-    BCPL1.bcpl --> BCPLX
-    BCPL1.bcpl --> BCPLIOX
+    BCPL_ --> BCPLX
+    BCPLRDOS.bcpl --> BCPLX
+    BCPL_ --> BCPLIOX
     BCPLALTO.bcpl --> BCPLIOX
     BCPLALTO.bcpl --> streams.d
     BCPLALTO.bcpl --> altofilesys.d
@@ -89,8 +90,11 @@ flowchart LR
     BLEX0A.bcpl --> BCPLIOX
     BLEXx(BLEX0.bcpl<br/>BLEX1.bcpl<br/>BLEX2.bcpl) --> BLEXX
     BLEXX --> BCPLX
-    BNCG0(BNCG0.bcpl<br/>BNCG1.bcpl<br/>BNCG2.bcpl<br/>BNCG3.bcpl<br/>BNCG4.bcpl<br/>BNCG5.bcpl<br/>BNCG6.bcpl<br/>BNCG7.bcpl<br/>BNCG7.bcpl) --> BCNGX
-    BSAEx(BSAE0.bcpl<br/>BSAE1.bcpl<br/>BSAE2.bcpl<br/>BSAE3.bcpl<br/>BSAE4.bcpl) --> BSAEX
-    BTRNx(BTRN0.bcpl<br/>BTRN1.bcpl<br/>BTRN2.bcpl<br/>BTRN3.bcpl<br/>BTRN4.bcpl<br/>BTRN5.bcpl) --> BTRNX
+    BNCGX --> BCPLX
+    BTRNX --> BCPLX
+    BSAEX --> BCPLX
+    BNCG0(BNCG0.bcpl<br/>BNCG1.bcpl<br/>BNCG2.bcpl<br/>BNCG3.bcpl<br/>BNCG4.bcpl<br/>BNCG5.bcpl<br/>BNCG6.bcpl<br/>BNCG7.bcpl<br/>BNCG7.bcpl) --> BNCGX
+    BSAE0(BSAE0.bcpl<br/>BSAE1.bcpl<br/>BSAE2.bcpl<br/>BSAE3.bcpl<br/>BSAE4.bcpl) --> BSAEX
+    BTRN0(BTRN0.bcpl<br/>BTRN1.bcpl<br/>BTRN2.bcpl<br/>BTRN3.bcpl<br/>BTRN4.bcpl<br/>BTRN5.bcpl) --> BTRNX
 
 ```

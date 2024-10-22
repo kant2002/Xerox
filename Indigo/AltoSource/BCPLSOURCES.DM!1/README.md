@@ -74,11 +74,7 @@ flowchart LR
     altofilesys.d[[altofilesys.d]]
     sysdefs.d[[sysdefs.d]]
     bcplfiles.d[[bcplfiles.d]]
-    BCAE0.bcpl --> BCAEX
-    BCAE1.bcpl --> BCAEX
-    BCAE2.bcpl --> BCAEX
-    BCAE3.bcpl --> BCAEX
-    BCAE4.bcpl --> BCAEX
+    BCAEx(BCAE0.bcpl<br/>BCAE1.bcpl<br/>BCAE2.bcpl<br/>BCAE3.bcpl<br/>BCAE4.bcpl) --> BCAEX
     BCAEX --> BCPLX
     BCPL0.bcpl --> BCPLX
     BCPL0.bcpl --> BCPLIOX
@@ -89,29 +85,12 @@ flowchart LR
     BCPLALTO.bcpl --> altofilesys.d
     BCPLALTO.bcpl --> sysdefs.d
     BCPLALTO.bcpl --> bcplfiles.d
-    BLEX0.bcpl --> BLEXX
     BLEX0A.bcpl --> BLEXX
     BLEX0A.bcpl --> BCPLIOX
-    BLEX1.bcpl --> BLEXX
-    BLEX2.bcpl --> BLEXX
+    BLEXx(BLEX0.bcpl<br/>BLEX1.bcpl<br/>BLEX2.bcpl) --> BLEXX
     BLEXX --> BCPLX
-    BNCG0 --> BCNGX
-    BNCG1 --> BCNGX
-    BNCG2 --> BCNGX
-    BNCG3 --> BCNGX
-    BNCG4 --> BCNGX
-    BNCG5 --> BCNGX
-    BNCG6 --> BCNGX
-    BNCG7 --> BCNGX
-    BNCG8 --> BCNGX
-    BSAE0 --> BSAEX
-    BSAE1 --> BSAEX
-    BSAE2 --> BSAEX
-    BSAE3 --> BSAEX
-    BSAE4 --> BSAEX
-    BTRN0 --> BTRNX
-    BTRN1 --> BTRNX
-    BTRN2 --> BTRNX
-    BTRN3 --> BTRNX
-    BTRN4 --> BTRNX
-    BTRN5 --> BTRNX```
+    BNCG0(BNCG0.bcpl<br/>BNCG1.bcpl<br/>BNCG2.bcpl<br/>BNCG3.bcpl<br/>BNCG4.bcpl<br/>BNCG5.bcpl<br/>BNCG6.bcpl<br/>BNCG7.bcpl<br/>BNCG7.bcpl) --> BCNGX
+    BSAEx(BSAE0.bcpl<br/>BSAE1.bcpl<br/>BSAE2.bcpl<br/>BSAE3.bcpl<br/>BSAE4.bcpl) --> BSAEX
+    BTRNx(BTRN0.bcpl<br/>BTRN1.bcpl<br/>BTRN2.bcpl<br/>BTRN3.bcpl<br/>BTRN4.bcpl<br/>BTRN5.bcpl) --> BTRNX
+
+```

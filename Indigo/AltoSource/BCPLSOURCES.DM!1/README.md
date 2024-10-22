@@ -25,6 +25,10 @@ Sources for BCPL compiler
 | [BCPL1.bcpl](BCPL1.bcpl) | BCPL Compiler -- IO routines. |
 | [BCPLALTO.bcpl](BCPLALTO.bcpl) | BCPL Alto-specific functions. |
 | [BCPLD.asm](BCPLD.asm) | BCPLD. *Debugger?* |
+| [BCPLDOS.bcpl](BCPLDOS.bcpl) | BCPL DOS-specific functions |
+| [BCPLIOX](BCPLIOX) | BCPL Compiler-- io definitions |
+| [BCPLRDOS.bcpl](BCPLRDOS.bcpl) | BCPL RDOS-specific functions |
+| [BCPLX](BCPLX) | Declarations for the BCPL Compiler, used throughout the Compiler. |
 | [BLEX0.bcpl](BLEX0.bcpl) | BCPL Compiler -- Lexical Analyzer,Main Program |
 | [BLEX0A.bcpl](BLEX0A.bcpl) | BCPL Compiler -- *DCS* Precompiled Declaration Files -- Read, Write Utilities |
 | [BLEX1.bcpl](BLEX1.bcpl) | BCPL Compiler -- Lexical Analyzer, Part 1. |
@@ -54,3 +58,60 @@ Sources for BCPL compiler
 | [BTRN5.bcpl](BTRN5.bcpl) | BCPL Compiler -- Part 5 of Trans. |
 | [BTRNX](BTRNX) | Declarations for the BCPL Compiler -- Trans. |
 | [BUTIL.asm](BUTIL.asm) | ??? |
+
+## Files dependency
+
+```mermaid
+flowchart LR
+    BCPLX{{BCPLX}}
+    BCPLIOX{{BCPLIOX}}
+    BCAEX{{BCAEX}}
+    BLEXX{{BLEXX}}
+    BCNGX{{BCNGX}}
+    BSAEX{{BSAEX}}
+    BTRNX{{BTRNX}}
+    streams.d[[streams.d]]
+    altofilesys.d[[altofilesys.d]]
+    sysdefs.d[[sysdefs.d]]
+    bcplfiles.d[[bcplfiles.d]]
+    BCAE0.bcpl --> BCAEX
+    BCAE1.bcpl --> BCAEX
+    BCAE2.bcpl --> BCAEX
+    BCAE3.bcpl --> BCAEX
+    BCAE4.bcpl --> BCAEX
+    BCAEX --> BCPLX
+    BCPL0.bcpl --> BCPLX
+    BCPL0.bcpl --> BCPLIOX
+    BCPL1.bcpl --> BCPLX
+    BCPL1.bcpl --> BCPLIOX
+    BCPLALTO.bcpl --> BCPLIOX
+    BCPLALTO.bcpl --> streams.d
+    BCPLALTO.bcpl --> altofilesys.d
+    BCPLALTO.bcpl --> sysdefs.d
+    BCPLALTO.bcpl --> bcplfiles.d
+    BLEX0.bcpl --> BLEXX
+    BLEX0A.bcpl --> BLEXX
+    BLEX0A.bcpl --> BCPLIOX
+    BLEX1.bcpl --> BLEXX
+    BLEX2.bcpl --> BLEXX
+    BLEXX --> BCPLX
+    BNCG0 --> BCNGX
+    BNCG1 --> BCNGX
+    BNCG2 --> BCNGX
+    BNCG3 --> BCNGX
+    BNCG4 --> BCNGX
+    BNCG5 --> BCNGX
+    BNCG6 --> BCNGX
+    BNCG7 --> BCNGX
+    BNCG8 --> BCNGX
+    BSAE0 --> BSAEX
+    BSAE1 --> BSAEX
+    BSAE2 --> BSAEX
+    BSAE3 --> BSAEX
+    BSAE4 --> BSAEX
+    BTRN0 --> BTRNX
+    BTRN1 --> BTRNX
+    BTRN2 --> BTRNX
+    BTRN3 --> BTRNX
+    BTRN4 --> BTRNX
+    BTRN5 --> BTRNX```
